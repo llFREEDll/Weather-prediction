@@ -8,6 +8,7 @@ Pagina que da preddicciones de tiempo basado en el contenido de otra pagina web
 <?php
 $output = "";
 $error = "";
+$file = "";
 if ($_GET) {
 
   $cuiudad = str_replace(" ","",$_GET["city"]);
@@ -92,7 +93,7 @@ if ($_GET) {
           }
           else if ($output != ""){
             echo "<div class=\"alert alert-success\" role=\"alert\">".
-              $output.
+              $output." \nmore info on: <a href=\"".$file."\">weather-forecast</a>".
             "</div>";
           }
 
